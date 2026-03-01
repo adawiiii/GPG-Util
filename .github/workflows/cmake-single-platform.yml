@@ -21,10 +21,3 @@ jobs:
       - name: Build (Release)
         run: cmake --build build --config Release --parallel
         shell: pwsh
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: windows-exe
-          path: build/**/Release/GPG-Util.exe
-          if-no-files-found: error
